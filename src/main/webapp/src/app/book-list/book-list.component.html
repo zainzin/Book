@@ -1,0 +1,14 @@
+<section>
+  <app-book-item *ngFor="let book of books" [book]="book"></app-book-item>
+</section>
+<section>
+  <form>
+    <input type="text" [(ngModel)]="title" name="title">
+    <input type="text" [(ngModel)]="publisher"
+           name="publisher">
+    <input type="text"
+           [(ngModel)]="publishedDate"
+           name="publishedDate">
+    <button type="submit" (click)="createBook()">Create Book</button>
+  </form>
+</section>
